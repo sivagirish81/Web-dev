@@ -5,22 +5,29 @@ body,html {margin:0;
 
 
 
-ul {
+ul#nav {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: hidden;                   /*What to do if there is an overflow? , we don't expect any, so we have made it hidden*/
+    /* other options: hidden,scroll,auto*/
     background-color: #555;
-    position: fixed;
-    top: 0;
+    position: fixed;    /* stays in the same place irrespective of scrolling*/
+    /* other options:   static 
+                        relative - relative to normal position
+                        fixed - relative to viewport
+                        absolute-relative to ancestor 
+                        sticky - sticks after offset
+    */
+    top: 0;         /* related to viewport , so 0px between top and viewport*/
     width: 100%;
 }
 
-li {
+ul#nav li {
     float: left;
 }
 
-li a {
+ul#nav li a {
     display: block;
     color: white;
     text-align: center;
@@ -28,7 +35,7 @@ li a {
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
+ul#nav li a:hover:not(.active) {
     background-color: #111;
 }
 
@@ -36,19 +43,43 @@ li a:hover:not(.active) {
     background-color: #111;
 }
 
-.bgimg
+
+
+.deals_img
 {
-    /*opacity:0.5;
-    filter:alpha(opacity=50);*/
+    float:left;
+    width:250px;
+    height:250px
+
 }
 
+div.deals_img img
+{
+    padding:50px;
+}
+
+.footer
+{       
+    margin-top:50px;                                /*default positioning is static. This is relative to code flow*/
+    background-color:rgb(110, 110, 228);
+    padding:20px
+}
+
+.footer p
+{
+    color:white;
+}
+
+.footer p a
+{
+    color:white;
+}
 
 .Deals_of_the_day:before,
 .Deals_of_the_day:after {
     content: "";
+    clear:both;
     display: table;
 }
 
-.Deals_of_the_day:after {
-    clear: both;
-}
+
