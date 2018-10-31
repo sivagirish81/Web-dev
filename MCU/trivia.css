@@ -4,6 +4,32 @@ body,html {margin:0;
 
 
 
+p#credits
+{
+  color:blue;
+  position:absolute;
+  right:0px;
+  top:55px;
+
+}
+
+
+.container
+{
+    position:relative;
+}
+
+#bgimg
+{
+    margin-top: 100px;
+}
+
+
+.form
+{
+    position:absolute;
+    left:10px;
+}
 
 ul#nav {
     list-style-type: none;
