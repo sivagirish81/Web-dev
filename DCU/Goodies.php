@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <link rel="stylesheet" href="CSS/goodies.css">  
+        <link rel="stylesheet" href="CSS/goodies.css"> 
+        <link rel="stylesheet" href="CSS/slider.css"> 
 
         <style>
         	.container
@@ -52,6 +53,7 @@
       right:0px;
       float:right;
     }
+
 		</style>
     <!--
       <script>
@@ -61,13 +63,25 @@
           }
     </script>
   -->
+<!--
   <?php
-  function func()
+  function func($itemname,$rate,$quantity)
   {
+      $myfile = fopen($_SERVER['DOCUMENT_ROOT'] ."Cart.txt", "a+") or die("Unable to open file!");
+      fwrite($myfile, $itemname);
+      fwrite($myfile, $rate);
+      fwrite($myfile, $quantity);
+      $cost=Number($rate)*Number($quantity);
+      fwrite($myfile, $cost);
+      fclose($myfile);
 
+        if (isset($_GET['hello'])) {
+            runMyFunction();
+          }
   }
 
   ?>
+-->
 	    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -80,6 +94,27 @@
 		background: orange;
 		}
 	</style>
+    <script>
+      function func(itemname,rate,idno)
+      {
+        var txt="myRange"+idno;
+      var slider = document.getElementById(txt);
+      var output = document.getElementById("demo");
+      //output.innerHTML = slider.value; // Display the default slider value
+      // Update the current slider value (each time you drag the slider handle)
+      var quantity=slider.value;
+      var cost=quantity*rate;
+      localStorage.setItem(itemname,cost);
+      console.log(localStorage.getItem(itemname));
+      }
+    </script>
+    <script>
+      function jfunc()
+      {
+        var x = document.getElementById("myRange").value;
+        return x;
+      }
+    </script>
 </head>
 <body>
 
@@ -104,12 +139,15 @@
 				<div class="description">
 
         				
-        				<h2 >Infinity Gauntlet</h2>
+        				<h2 >Superman T-shirt</h2>
 						<ul class="specs" >
 	                		<li>Power : Erase half of the world from existense</li>
 	                		<li>Weight : 1kg</li>
-	                		
-                      <button class="buy_button" type="button" onclick="func()"> ADD TO CART</button>
+                      <div id="Quantity-Selector">
+                        <input type="range" min="0" max="10" value="0" class="slider" id="myRange1">
+                      </div>
+
+                      <button class="buy_button" type="button" onclick="func('Superman T-shirt','1999','1')"> ADD TO CART</button>
 	                		
 	                	</ul>
 					</div>
@@ -136,14 +174,17 @@
               <div class="description">
 
         				
-        				<h2 >Infinity Gauntlet</h2>
+        				<h2 >Flash T-shirt</h2>
                 	
 
                     <ul class="specs" >
                       <li>Power : Erase half of the world from existense</li>
                       <li>Weight : 1kg</li>
+                      <div id="Quantity-Selector">
+                        <input type="range" min="0" max="10" value="0" class="slider" id="myRange2">
+                      </div>
                       
-                      <button class="buy_button" type="button" onclick="func()"> ADD TO CART</button>
+                      <button class="buy_button" type="button" onclick="func('Flash T-shirt','1999','2')"> ADD TO CART</button>
                       
                     </ul>
 				</div>
@@ -171,13 +212,16 @@
               <div class="description">
 
         				
-        				<h2 >Infinity Gauntlet</h2>
+        				<h2 >Batman T-shirt</h2>
                 	
                     <ul class="specs" >
                       <li>Power : Erase half of the world from existense</li>
                       <li>Weight : 1kg</li>
+                      <div id="Quantity-Selector">
+                        <input type="range" min="0" max="10" value="0" class="slider" id="myRange3">
+                      </div>
                       
-                      <button class="buy_button" type="button" onclick="func()"> ADD TO CART</button>
+                      <button class="buy_button" type="button" onclick="func('Batman T-shirt','1999','3')"> ADD TO CART</button>
                       
                     </ul>
 				</div>
@@ -202,14 +246,17 @@
 				<div class="description">
 
         				
-        				<h2 >Infinity Gauntlet</h2>
+        				<h2 >Flash T-Shirt Special</h2>
                 	
 
                     <ul class="specs" >
                       <li>Power : Erase half of the world from existense</li>
                       <li>Weight : 1kg</li>
+                      <div id="Quantity-Selector">
+                        <input type="range" min="0" max="10" value="0" class="slider" id="myRange4">
+                      </div>
                       
-                      <button class="buy_button" type="button" onclick="func()"> ADD TO CART</button>
+                      <button class="buy_button" type="button" onclick="func('Flash T-Shirt Special','1999','4')"> ADD TO CART</button>
                       
                     </ul>
 					</div>
@@ -229,12 +276,15 @@
                 	<img class = "objimg" src="images/T5.jpg" alt="Thanos_Gauntlet" width="200" height="200">   
                 </div>
 				<div class="description">
-			  <h2 >Infinity Gauntlet</h2>
+			  <h2 >Phoenix T-Shirt</h2>
                     <ul class="specs" >
                       <li>Power : Erase half of the world from existense</li>
                       <li>Weight : 1kg</li>
+                      <div id="Quantity-Selector">
+                        <input type="range" min="0" max="10" value="0" class="slider" id="myRange5">
+                      </div>
                       
-                      <button class="buy_button" type="button" onclick="func()"> ADD TO CART</button>
+                      <button class="buy_button" type="button" onclick="func('Phoenix T-Shirt','1999','5')"> ADD TO CART</button>
                     </ul>
                   </div>
 				<div class="price_n_offers">
