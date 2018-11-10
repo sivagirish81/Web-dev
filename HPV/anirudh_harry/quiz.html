@@ -1,0 +1,160 @@
+<html>
+<head>
+	<title>Quiz</title>
+	<script>
+		function func(){
+	var ques1=document.getElementById("quiz").q1.value;
+	var ques2=document.getElementById("quiz").q2.value;
+	var ques3=document.getElementById("quiz").q3.value;
+	correct=0;
+	if(ques1=="aaa"){
+		correct++;
+	}
+	if(ques2=="aaa"){
+		correct++;
+	}
+	if(ques3=="aaa"){
+		correct++;
+	}
+	var msg;
+	var img_arr=['4.jpg','40.jpg','98.jpg'];
+	var img_ch;
+	if(correct==0){
+		msg="you can do better";
+		img_ch=img_arr[0];
+	}
+	if(correct>=1 && correct<3){
+		msg="Watch more of harry potter and score better next time";
+		img_ch=img_arr[1];
+	}
+	if(correct==3){
+		msg="Wow!!";
+		img_ch=img_arr[2];
+	}
+	document.getElementById("after_submit").style.visibility="visible";
+	document.getElementById("number_correct").innerHTML=correct+"<br>"+msg;
+	document.getElementById("gif").src=img_ch;
+	}
+	</script>
+	
+	<style>
+	html{
+	
+	background:#ffebc6;		
+}
+	#container ul{	
+	list-style:none;
+	margin-left:120px;
+	margin-bottom:-25px;
+	margin-top:25px;
+}
+#container ul li{
+	background-color:#c66107;
+	width:250px;
+	border:1px solid white;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+	float:left;
+	color:white;
+	position:relative;
+	/*background-color: rgba(255, 153, 36, 0.6)*/
+
+}
+
+#container ul li:hover{
+	background-color:#726254;
+	transition: 0.8s all;
+
+}
+
+#container ul li:hover > ul{
+display:block;
+
+}
+	#after_submit {
+		visibility:hidden;
+	}
+
+	#number_correct{
+		font-style:bold;
+	}
+	
+	#quiz{
+		margin-left:10px;
+		background:#f2bf09;	
+		padding:10px;
+		width:400px;
+		float:left;	
+	}
+	
+	#textbox{
+		height:50px;
+		font-size:16px;r 
+		border:none;
+		padding-left:5px;
+	}
+	
+	#button{
+		background:#0a6802;
+		border:none;
+		border-radius:5px;
+		padding:2px;
+		color:white;
+		font-size:20px;
+		transition-duration:.5s;
+		margin-top:15px;
+	}
+	
+	#button:hover{
+	background:white;
+	border:1px;
+	color:black;
+	cursor:pointer;
+	}
+
+	
+	</style>
+</head>
+<body>
+	<div id="container">
+<ul>
+	<li>item1</li>
+	<li>Entertainment</li>
+	<li>item3</li>
+	<li>item4</li>
+</ul>
+</div>
+<br>
+<br>
+<div>
+	<h1 id="heading">Harry Potter Quiz</h1>
+</div>
+
+	<form id="quiz" name="quiz">
+	<p><b>Enter your name</b></p>
+	<label><input id="textbox" type="text" name="name" required autofocus placeholder="Name"></label><br>
+	<p><b>This is question 1?</b></p>
+	<input id="radiobutton1" type="radio" name="q1" value="aaa"/>aaa<br>
+	<input id="radiobutton1" type="radio" name="q1" value="bbb"/>bbb<br>
+	<input id="radiobutton1" type="radio" name="q1" value="ccc"/>ccc<br>
+	<input id="radiobutton1" type="radio" name="q1" value="ddd"/>ddd<br>
+	<p><b>This is question 2?</b></p>
+	<input id="radiobutton2" type="radio" name="q2" value="aaa"/>aaa<br>
+	<input id="radiobutton2" type="radio" name="q2" value="bbb"/>bbb<br>
+	<input id="radiobutton2" type="radio" name="q2" value="ccc"/>ccc<br>
+	<input id="radiobutton2" type="radio" name="q2" value="ddd"/>ddd<br>
+	<p><b>This is question 3?</b></p>
+	<input id="radiobutton3" type="radio" name="q3" value="aaa"/>aaa<br>
+	<input id="radiobutton3" type="radio" name="q3" value="bbb"/>bbb<br>
+	<input id="radiobutton3" type="radio" name="q3" value="ccc"/>ccc<br>
+	<input id="radiobutton3" type="radio" name="q3" value="ddd"/>ddd<br>
+	<input type="button" id="button" onclick="func()" value="Submit"></button>
+	</form>
+	<div id="after_submit">
+	Correct Answers:
+	<p id="number_correct"></p>
+	<img id="gif" height="500" width="500"></img>
+	</div>
+</body>
+</html>
