@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>Forms in HTML</title>
+</head>
+<body>
+	<form action="Y.php" method="GET"><!--action attribute is used to process the data and method(GET[default]-everything will come after ? or POST-hides it) to send the data-->
+	<h>Sample Signup Form</h><br><br>
+	<!--<label for="Name">Name</label>-->
+	<label>Name<input type="text" name="Name" id="Name" required autofocus placeholder="Name"></label><br><br>	
+	<label>Password<input type="password" name="Password1" placeholder="Password"></label><br><br>
+	<label>Re-enter password<input type="password" name="Password2" placeholder="Password"></label><br><br>
+	<label>Email<input type="Email" name="Email"></label><br><br>
+	<label>Age<input type="number" name="Age" max="5"></label><br><br>
+	<label>Color<input type="color" name="Color"></label><br><br>
+	<label>DOB<input type="date" name="Date" ></label><br><br>
+	<label>Time<input type="time" name="Time"></label><br><br>
+	<label>Date and time<input type="datetime-local" name="Datetime"></label><br><br>
+	<label>Range<input type="Range" name="Range" max="10"></label><br><br>
+	<label>URL<input type="URL" name="URL"></label><br><br>
+	<label>File<input type="file" name="Date"></label><br><br>
+	<textarea rows="8" cols="45">
+		Address
+	</textarea>
+	<br>
+	<label>State
+	<select ><!--Drop down menu give multiple if u wish to-->
+		<option>Karnataka</option>
+		<option>Uttar Pradesh</option>
+		<option>Goa</option>
+		<option>Delhi</option>	
+		<option selected>West Bengal</option>
+	</select>
+	</label>
+	<br><br>
+	<datalist id="States">
+		<option>Karnataka</option>
+		<option>Uttar Pradesh</option>
+		<option>Goa</option>
+		<option>Delhi</option>	
+		<option>UP</option>
+		<option>MP</option>
+		<option>Haryana</option>
+	</datalist>
+	<label>State<input type="text" name="State" list="States"></label>
+	<br><br>
+	<!--Radio Button-->
+	<label> Plan Type ::
+		<input type="radio" name="Plan" checked>Free
+		<input type="radio" name="Plan">Paid
+		<input type="radio" name="Plan">Premium
+	</label>
+	<br><br>
+	<label>
+		What do you want to subscribe for? ::
+		<input type="checkbox" name="Service" checked>Magazine
+		<input type="checkbox" name="Service">Newsletter
+		<input type="checkbox" name="Service">Books 
+		<input type="checkbox" name="Service">Offers
+	</label>
+	<br><br>
+	<!--Submit and reset-->
+		<input type="Submit">
+		<input type="Reset">
+		<br><br>
+		<input type="button" value="Click">
+		<button>Click This</button>
+	</form>
+</body>
+</html>

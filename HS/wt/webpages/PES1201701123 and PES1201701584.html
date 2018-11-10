@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>Signup Page</title>
+</head>
+<body>
+	<form action="Y.php" method="POST">
+	<h1 align="center"><b><i><u><strong>Signup Form For Good Reads</strong></u></i></b></h1>
+	<label>Name<input type="text" name="Name" id="Name" required autofocus placeholder="Name"></label><br><br>
+	<label>Email<input type="Email" name="Email" placeholder="Email"></label><br><br>
+	<label>DOB<input type="date" name="Date"></label><br><br>
+	<label>
+		For how long do you want to subscribe for? ::
+		<input type="radio" name="Service" title="100Rs">1 Month
+		<input type="radio" name="Service" title="500Rs">6 Months
+		<input type="radio" name="Service" title="1000Rs">1 Year
+		<input type="radio" name="Service" title="1400Rs">Lifetime
+	</label><br><br>
+	<datalist id="States">
+		<option>Karnataka</option>
+		<option>Uttar Pradesh</option>
+		<option>Goa</option>
+		<option>Delhi</option>	
+		<option>UP</option>
+		<option>MP</option>
+		<option>Haryana</option>
+	</datalist>
+	<label>State<input type="text" name="State" list="States"></label>
+	<br><br>
+	<label>Please write your field of interest in books::<input type="text" name="Text"></label>
+	<br><br>
+	<label>Upload a picture<input type="file" name="Date"></label><br><br>
+	<br><br>
+	<input type="Submit">
+	<input type="Reset">
+	<br><br>
+	<a href="sub.html">Already a member?</a>
+	</form>
+</body>
+</html>
