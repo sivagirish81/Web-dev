@@ -1,0 +1,76 @@
+body,html {margin:0;
+    height:100%
+}
+
+
+
+p#credits
+{
+  color:blue;
+  position:absolute;
+  right:0px;
+  top:55px;
+
+}
+
+
+.container
+{
+    position:relative;
+}
+
+#bgimg
+{
+    margin-top: 100px;
+}
+
+
+.form
+{
+    position:absolute;
+    left:10px;
+}
+
+ul#nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;                   /*What to do if there is an overflow? , we don't expect any, so we have made it hidden*/
+    /* other options: hidden,scroll,auto*/
+    background-color: #555;
+    position: fixed;    /* stays in the same place irrespective of scrolling*/
+    /* other options:   static 
+                        relative - relative to normal position
+                        fixed - relative to viewport
+                        absolute-relative to ancestor 
+                        sticky - sticks after offset
+    */
+    top: 0;         /* related to viewport , so 0px between top and viewport*/
+    width: 100%;
+}
+
+ul#nav li {
+    float: left;
+}
+
+ul#nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+ul#nav li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #111;
+}
+
+#submit_button
+{
+    padding:10px;
+    background-color:yellow;
+}

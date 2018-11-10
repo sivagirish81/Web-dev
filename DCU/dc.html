@@ -1,0 +1,119 @@
+<html>
+	<head>
+		<title>DC</title>
+		
+		<style>
+		html 
+		{
+			height: 100%;
+			width: 100%;
+			padding: 0; margin: 0; /* reset the default stylesheet */
+		}
+		#BG 
+		{
+			border: 2px solid black;
+			padding: 400px;
+			background: url(images/justice_league.0.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		* 
+		{
+		  box-sizing: border-box;
+		}
+
+		body 
+		{
+		  height: 100%;
+		  width: 100%;
+		  padding: 0; margin: 0;
+		  font-family: Arial;
+		  font-size: 17px;
+		}
+
+		.container 
+		{
+		  /*position: relative;*/
+		  position:relative;
+		  bottom:-250px;
+		  max-width: 800px;
+		  margin: 0 auto;
+		}
+
+
+		.container .content {
+		  position: absolute;
+		  bottom: 0;
+		  background: rgb(0, 0, 0); 
+		  background: rgba(0, 0, 0, 0.5); 
+		  color: #f1f1f1;
+		  width: 100%;
+		  padding: 20px;
+		}
+		
+		.button1
+		{
+		  border-radius: 4px;
+		  background-color: #f4511e;
+		  border: none;
+		  color: #FFFFFF;
+		  text-align: center;
+		  font-size: 28px;
+		  padding: 20px;
+		  width: 200px;
+		  transition: all 0.5s;
+		  cursor: pointer;
+		  margin: 5px;
+		}
+
+		.button1 span {
+		  cursor: pointer;
+		  display: inline-block;
+		  position: relative;
+		  transition: 0.5s;
+		}
+
+		.button1 span:after {
+		  content: '\00bb';
+		  position: absolute;
+		  opacity: 0;
+		  top: 0;
+		  right: -20px;
+		  transition: 0.5s;
+		}
+
+		.button1:hover span {
+		  padding-right: 25px;
+		}
+
+		.button1:hover span:after {
+		  opacity: 1;
+		  right: 0;
+		}
+		</style>
+	</head>
+	<body>
+		<div id="BG">
+		<div class="container">
+			<div class="content">
+				<h1>DC Universe</h1>
+					<p>The DC Universe (DCU) is the fictional shared universe where most stories in American comic book titles published by DC Comics take place. DC superheroes such as Superman, Batman, and Wonder Woman are from this universe, and it also contains well known supervillains such as Lex Luthor, the Joker, and Darkseid. In context, the term "DC Universe" usually refers to the main DC continuity. </p>
+					<script type="text/javascript">
+					<!--
+					function myfunc(p)
+					{
+					location.href = p;
+					}
+					-->
+					</script>
+					<button class="button1" id="goodies" onclick="myfunc('Goodies.php')"> <span>Goodies </span></button>
+					<button class="button1" id="books" onclick="myfunc('Books.html')"> <span>BOOKS </span></button>
+					<button class="button1" id="Trivia" onclick="myfunc('Trivia.html')"> <span>Trivia </span></button>
+					<button class="button1" id="clips" onclick="myfunc('Clips.html')"> <span>Clips</span></button>
+			</div>
+		</div>
+	</body>
+</html>
+		
+	<!--border: 2px solid black;
+			padding: 400px;*/-->	
