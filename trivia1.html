@@ -1,0 +1,223 @@
+<html>
+	<head>
+		<title>DC</title>
+		
+		<style>
+		html 
+		{
+			height: 100%;
+			width: 100%;
+			padding: 0; margin: 0; /* reset the default stylesheet */
+		}
+		#BG 
+		{
+			border: 2px solid black;
+			padding: 500px;
+			background: url(images/maxresdefault-1.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		* 
+		{
+		  box-sizing: border-box;
+		}
+
+		body 
+		{
+		  height: 100%;
+		  width: 100%;
+		  padding: 0; margin: 0;
+		  font-family: Arial;
+		  font-size: 16px;
+		}
+
+		.container 
+		{
+		  /*position: relative;*/
+		  position:relative;
+		  /*bottom:-50px;*/
+		  top:-40px;
+		  max-width: 800px;
+		  margin: 0 auto;
+		}
+
+
+		.container .content {
+		  position: absolute;
+		  bottom: -500;
+		  background: rgb(0, 0, 0); 
+		  background: rgba(0, 0, 0, 0.5); 
+		  color: #f1f1f1;
+		  width: 100%;
+		  padding: 20px;
+		}
+		
+		.button1
+		{
+		  border-radius: 4px;
+		  background-color: #f4511e;
+		  border: none;
+		  color: #FFFFFF;
+		  text-align: center;
+		  font-size: 18px;
+		  padding: 10px;
+		  width: 100px;
+		  transition: all 0.5s;
+		  cursor: pointer;
+		  margin: 5px;
+		}
+
+		.button1 span {
+		  cursor: pointer;
+		  display: inline-block;
+		  position: relative;
+		  transition: 0.5s;
+		}
+
+		.button1 span:after {
+		  content: '\00bb';
+		  position: absolute;
+		  opacity: 0;
+		  top: 0;
+		  right: -20px;
+		  transition: 0.5s;
+		}
+
+		.button1:hover span {
+		  padding-right: 25px;
+		}
+
+		.button1:hover span:after {
+		  opacity: 1;
+		  right: 0;
+		}
+		
+		ul#nav 
+		{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;                   /*What to do if there is an overflow? , we don't expect any, so we have made it hidden*/
+			/* other options: hidden,scroll,auto*/
+			background-color: #555;
+			position: fixed;    /* stays in the same place irrespective of scrolling*/
+			/* other options:   static 
+								relative - relative to normal position
+								fixed - relative to viewport
+								absolute-relative to ancestor 
+								sticky - sticks after offset
+			*/
+			top: 0;         /* related to viewport , so 0px between top and viewport*/
+			width: 100%;
+			left:0px;
+		}
+
+		ul#nav li 
+		{
+			float: left;
+		}
+
+		ul#nav li a 
+		{
+			display: block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+		ul#nav li a:hover:not(.active) 
+		{
+			background-color: #111;
+		}
+
+		.active 
+		{
+			background-color: #111;
+		}
+		
+		</style>
+	</head>
+	<body>
+		<div id="BG">
+				<ul id="nav">
+				  <li ><a  href="dc.html">Home</a></li>
+				  <li><a href="Goodies.html">Goodies</a></li>
+				  <li><a  href="Clips.html">CLIPS</a></li>
+				  <li><a class="active" href="Trivia.html">Trivia</a></li>
+				  <li><a href="Books.html">Books</a></li>
+				</ul>
+		<div class="container">
+			<div class="content">
+				<h1>DC Universe Ouiz</h1>
+				
+				<form action="trivia.php" method="post">
+					<div class="form">
+
+
+							<div class="quesition">
+							<p> 1.The Flash had two enemies from the future. One was The Reverse Flash. Who was the other?</p>
+								
+								  <input  class="radio" type="radio" name="option1" value="Abracadabra" >Abracadabra<br>
+								  <input class="radio" type="radio" name="option1" value="The Mirror Master"> The Mirror Master<br>
+								  <input class="radio" type="radio" name="option1" value="Goldface">Goldface</br>
+								  <input class="radio" type="radio" name="option1" value="Captain Cold">Captain Cold</br>
+										
+
+						</div>
+						<!--correct answer: Captain Cold-->
+						<div class="quesition">
+							<p> 2.What did Superman use to open the door of his "Fortress of Solitude"?</p>
+								
+								  <input  class="radio" type="radio" name="option2" value="A hidden remote control." >A hidden remote control.<br>
+								  <input class="radio" type="radio" name="option2" value="His own super-whistle.">His own super-whistle.<br>
+								  <input class="radio" type="radio" name="option2" value="A multi-tonal sonic key.">A multi-tonal sonic key.</br>
+								  <input class="radio" type="radio" name="option2" value="An enormous, yellow, arrow-shaped key.">An enormous, yellow, arrow-shaped key.</br>
+											
+
+						</div>
+						<!--correct answer:: An enormous, yellow, arrow-shaped key. -->
+						<div class="quesition">
+								<p>3. What was the name of the mischievous, interdimensional pest that would constantly pop up to irk the Man of Steel?</p>
+									
+									  <input  class="radio" type="radio" name="option3" value="Omar The Slacker" >Omar The Slacker<br>
+									  <input class="radio" type="radio" name="option3" value="Mr. Mxyzptlk"> Mr. Mxyzptlk<br>
+									  <input class="radio" type="radio" name="option3" value="The Green Goblin">The Green Goblin</br>
+									  <input class="radio" type="radio" name="option3" value="Bat-Mite">Bat-Mite</br>
+												
+
+						</div>	
+						<!--correct answer: Bat-Mite-->
+						<div class="quesition">
+							<p>4.How did the Flash travel through time?</p>
+								
+								  <input  class="radio" type="radio" name="option4" value="Ran counter to the rotation of the Earth real fast!" >Ran counter to the rotation of the Earth real fast!<br>
+								  <input class="radio" type="radio" name="option4" value="Wished himself there.">Wished himself there.<br>
+								  <input class="radio" type="radio" name="option4" value="Spun on an axis at hyperlight speeds.">Spun on an axis at hyperlight speeds.</br>
+								  <input class="radio" type="radio" name="option4" value="His Cosmic Treadmill.">His "Cosmic Treadmill".</br>
+											
+
+						</div>
+						<!--correct answer:: His "Cosmic Treadmill" -->
+						<div class="quesition">
+							<p>5.What was the name of Green Arrow's sidekick during his "Batman"-like days?</p>
+								
+								  <input  class="radio" type="radio" name="option5" value="Sneezy" >Sneezy<br>
+								  <input class="radio" type="radio" name="option5" value="Arrowboy">Arrowboy<br>
+								  <input class="radio" type="radio" name="option5" value="Lance">Lance</br>
+								  <input class="radio" type="radio" name="option5" value="Speedy">Speedy</br>
+											
+
+						</div>
+						<!--correct answer:speedy -->
+						<!--<input id="submit_button" class="button1" name="submit" value="Submit" onclick="returnScore()">-->
+						<button class="button1" onclick="returnScore()">Submit</button>
+
+				</form>
+
+
+	</div>
+			</div>
+		</div>
+	</body>
+</html>

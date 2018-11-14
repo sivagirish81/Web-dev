@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    
+    <style type="text/css">
+        body, html
+        { 
+            font: 14px sans-serif;
+
+
+         }
+        
+        .wrapper{ width: 350px; padding: 20px; }
+        #BG 
+        {
+            padding: 400px;
+            background-image: url(halloween-background-with-forest-castle-of-terror-and-pumpkin-backdrop_1024x1024@2x.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin:0px;
+            height: 100%;
+        }
+
+        #submit_login {
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+            padding:10px;
+            border-radius: 5px;
+            margin:10px;
+        }
+
+        #submit_login:focus {
+            color: #fff;
+            background-color: #286090;
+            border-color: #122b40;
+        }
+
+        #submit_login:hover {
+            color: #fff;
+            background-color: #286090;
+            border-color: #204d74;
+        }
+
+        #username_input
+        {
+            margin:10px;
+            padding:5px;
+            border-radius: 5px;
+        }
+        
+        #password_input
+        {
+            margin:10px;
+            padding:5px;
+            border-radius: 5px;
+        }
+
+
+    </style>
+
+
+
+<html>
+<body>
+    <div id="BG">
+    <div class="wrapper">
+        <h2>Sign Up</h2>
+        <p>Please fill this form to create an account.</p>
+        <form action="register.php" method="post">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="uname" class="form-control">
+                
+            </div>    
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="pwd" class="form-control">
+             
+            </div>
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" name="confirm_pwd" class="form-control">
+               
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </div>
+            <p>Already have an account? <a href="login.html">Login here</a>.</p>
+        </form>
+    </div>   
+    </div> 
+</body>
+</html>

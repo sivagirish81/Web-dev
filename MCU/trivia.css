@@ -37,7 +37,7 @@ ul#nav {
     padding: 0;
     overflow: hidden;                   /*What to do if there is an overflow? , we don't expect any, so we have made it hidden*/
     /* other options: hidden,scroll,auto*/
-    background-color: #555;
+    background-color: blue;
     position: fixed;    /* stays in the same place irrespective of scrolling*/
     /* other options:   static 
                         relative - relative to normal position
